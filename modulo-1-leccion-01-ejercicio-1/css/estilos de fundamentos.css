@@ -1,3 +1,18 @@
 .opinion{
     color:brown;
 }
+a:link{
+    color:coral;
+}
+a:visited{
+    color:chartreuse;
+}
+legend:hover{
+    color:red;
+}
+legend:active{
+    color:royalblue;
+}
+input:focus{
+   color:violet;
+}
