@@ -16,3 +16,6 @@ legend:active{
 input:focus{
    color:violet;
 }
+ol>li{
+    margin-left: 40px;
+}
