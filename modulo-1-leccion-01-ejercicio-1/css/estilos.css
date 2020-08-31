@@ -1,6 +1,11 @@
 h2{
     color:green;
 }
+h2::first-letter{
+    font-size: 36px;
+    color: rgb(2, 54, 25);
+}
+    
 header{
     font-size: xx-large
 }
@@ -9,4 +14,10 @@ header{
 }
 nav{
     font-size: larger;
+}
+li:nth-child(1n){
+    background:green;
+}
+li:nth-child(2n){
+    background: violet;
 }
