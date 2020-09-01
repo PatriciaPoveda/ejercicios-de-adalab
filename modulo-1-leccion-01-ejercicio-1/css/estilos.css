@@ -11,6 +11,7 @@ header{
 }
 header{
     background: turquoise;
+    width: 2.7in;
 }
 nav{
     font-size: larger;
@@ -20,4 +21,10 @@ li:nth-child(1n){
 }
 li:nth-child(2n){
     background: violet;
+}
+footer{
+    color:rgb(55, 0, 255);
+}
+li{
+    width: 180px;
 }
