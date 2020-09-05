@@ -1,0 +1,16 @@
+.box {
+  background: #f3f4f5;
+}
+.title {
+  font-family: Arial;
+  font-size: 24px;
+}
+.x {
+  color: blue;
+}
+p,
+li {
+  font-family: georgia;
+  font-size: 18px;
+  color: #757575;
+}
