@@ -1,0 +1,16 @@
+.displays {
+  height: 100px;
+  width: 100;
+}
+.lorem--1 {
+  display: block;
+}
+.lorem--2 {
+  display: inline;
+}
+.lorem--3 {
+  display: none;
+}
+.lorem--4 {
+  display: inline-block;
+}
