@@ -1,0 +1,15 @@
+.container {
+  box-sizing: border-box;
+  border: red solid;
+  background: cadetblue;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.item {
+  border: black solid;
+  background: crimson;
+  height: 100px;
+  width: 200px;
+  margin: 0px;
+}
