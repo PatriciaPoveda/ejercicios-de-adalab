@@ -1,0 +1,15 @@
+.container {
+  height: 500px;
+  width: 500px;
+  border: black solid;
+  display: flex;
+  flex-direction: row;
+}
+.item {
+  box-sizing: border-box;
+  background: violet;
+  border: black solid;
+  height: auto;
+  width: auto;
+  margin: 0px;
+}
