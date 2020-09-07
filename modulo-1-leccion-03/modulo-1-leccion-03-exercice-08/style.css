@@ -1,5 +1,7 @@
 :root {
   --fondo-principal: #eaeaea;
+  --color-anchor: green;
+  --color-text: grey;
 }
 
 body {
@@ -25,13 +27,9 @@ ul {
   padding: 0;
 }
 
-.title {
-  color: grey;
-  margin: 0;
-}
-
+.title,
 .subtitle {
-  color: grey;
+  color: var(--color-text);
   margin: 0;
 }
 
@@ -39,11 +37,8 @@ ul {
   display: inline;
 }
 
-.menu a {
-  color: green;
-  text-decoration: none;
-}
-
+.menu a,
 p a {
-  color: green;
+  color: var(--color-anchor);
+  text-decoration: none;
 }
