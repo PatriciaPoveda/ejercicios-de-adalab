@@ -5,9 +5,9 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  padding: 20px;
 }
 .item {
   border: black solid;
   display: inline;
+  padding: 0px 20px 0px 20px;
 }
