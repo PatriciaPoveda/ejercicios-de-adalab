@@ -1,0 +1,30 @@
+.main-about {
+  border: black solid;
+  background-color: white;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+  /* box-sizing: border-box; */
+}
+.title-about {
+  border: black solid;
+  background-color: none;
+  /* width: 9%; */
+  /* margin: 40% 80% 0% (80%); */
+  padding: 0%;
+  margin: 8% 0% 0% 0%;
+  font-family: rubik;
+  font-size: 24px;
+  color: aqua;
+}
+.text-about {
+  border: black solid;
+  /* background-color: darkorchid; */
+  margin: 5% 2% 5% 2%;
+  font-family: OpenSans;
+  font-size: 16px;
+  color: #54585a;
+}
