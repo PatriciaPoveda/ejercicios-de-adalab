@@ -1,0 +1,9 @@
+.list {
+  border: black solid;
+  display: inline;
+}
+.text {
+  height: 86%;
+  width: 86%;
+  max-width: 600px;
+}
