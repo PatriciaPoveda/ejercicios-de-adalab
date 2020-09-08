@@ -2,7 +2,7 @@
   border: black solid;
   background-color: white;
   width: 100%;
-  height: auto;
+  height: 100%;
   display: flex;
   flex-direction: column;
   /* justify-content: center; */
@@ -15,7 +15,7 @@
   /* width: 9%; */
   /* margin: 40% 80% 0% (80%); */
   padding: 0%;
-  margin: 8% 0% 0% 0%;
+  margin: 5% 0% 0% 0%;
   font-family: rubik;
   font-size: 24px;
   color: aqua;
@@ -23,7 +23,8 @@
 .text-about {
   border: black solid;
   /* background-color: darkorchid; */
-  margin: 5% 2% 5% 2%;
+  /* height: 75%; */
+  margin: 12% 3% 4% 3%;
   font-family: OpenSans;
   font-size: 16px;
   color: #54585a;
