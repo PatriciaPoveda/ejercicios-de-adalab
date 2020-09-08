@@ -1,15 +1,31 @@
+* {
+  box-sizing: border-box;
+}
+
 .container {
   height: 500px;
   width: 500px;
   border: black solid;
+  margin: 0px;
   display: flex;
-  flex-direction: row;
+}
+.horizontal {
+  flex-direction: column;
 }
 .item {
-  box-sizing: border-box;
   background: violet;
   border: black solid;
-  height: auto;
-  width: auto;
+  /* height: auto; */
+  /* width: auto; */
+  margin: 0px;
+}
+.vertical {
+  flex-direction: row;
+}
+.item-2 {
+  background: violet;
+  border: black solid;
+  width: 25px;
+  /* height: auto; */
   margin: 0px;
 }
