@@ -1,5 +1,6 @@
 .box {
   border: 8px black solid;
+  max-width: 800px;
 }
 .box-1 {
   display: flex;
