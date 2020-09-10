@@ -1,32 +1,65 @@
+* {
+  /* width: 100%; */
+  margin: 0;
+}
+/* Start TEAM */
+
 .about {
-  border: black solid;
+  margin: 0 15px;
+  /* border: black solid; */
   background-color: white;
-  width: 100%;
-  text-align: center;
-  /* height: 100%; */
-  /* display: flex;
-  /* flex-direction: column; */
-  /* justify-content: center; */
-  /* align-items: center; */
-  /* box-sizing: border-box; */
 }
 .about-title {
-  border: black solid;
-  background-color: none;
-  /* width: 9%; */
-  /* margin: 40% 80% 0% (80%); */
-  padding: 0%;
-  margin: 5% 0% 0% 0%;
-  font-family: rubik;
+  text-align: center;
+  /* border: black solid; */
+  margin-top: 30px;
+  margin-bottom: 15px;
   font-size: 24px;
+  font-family: "rubik";
+  line-height: 45px;
   color: aqua;
 }
 .about-text {
-  border: black solid;
-  /* background-color: darkorchid; */
-  /* height: 75%; */
-  margin: 12% 3% 4% 3%;
-  font-family: OpenSans;
+  text-align: center;
+  /* border: black solid; */
+  font-family: "open sans";
   font-size: 16px;
+  line-height: 24px;
   color: #54585a;
+  margin-bottom: 30px;
+}
+
+/* Finish TEAM */
+
+/* Start strengths-weaknesse */
+.container {
+  /* margin: 0; */
+  background-color: rgb(184, 184, 185, 0.2);
+}
+.strengths-weaknesses {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 15px;
+}
+
+.strengths-title,
+.weaknesses-title {
+  font-family: "rubik";
+  font-size: 22px;
+  line-height: 45px;
+  color: #099d8d;
+  margin-top: 30px;
+}
+.strengths-text,
+.weaknesses-text {
+  /* align-items: center; */
+  text-align: center;
+  font-family: "open sans";
+  font-size: 16px;
+  line-height: 24px;
+  color: #54585a;
+}
+.weaknesses-text {
+  margin-bottom: 45px;
 }
