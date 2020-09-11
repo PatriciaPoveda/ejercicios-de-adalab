@@ -1,6 +1,7 @@
 * {
   width: 100%;
   margin: 0 auto;
+  /* margin: 0; */
   text-align: center;
 }
 /* Start TEAM */
@@ -10,16 +11,17 @@
   background-color: white;
 }
 .about-title {
-  text-align: center;
+  /* text-align: center; */
   margin-top: 30px;
   margin-bottom: 15px;
   font-size: 24px;
   font-family: "rubik";
   line-height: 45px;
   color: aqua;
+  /* text-transform: capitalize; */
 }
 .about-text {
-  text-align: center;
+  /* text-align: center; */
   font-family: "open sans";
   font-size: 16px;
   line-height: 24px;
@@ -29,6 +31,12 @@
 
 /* Finish TEAM */
 
+/* Start strengths-weaknesse */
+
+.strengths-weaknesses-container {
+  /* margin: 0; */
+  background-color: rgb(184, 184, 185, 0.2);
+}
 .square {
   height: 50px;
   width: 50px;
@@ -37,12 +45,6 @@
   justify-content: center;
   align-items: center;
   transform: translate(0, -50%) rotate(-45deg);
-}
-/* Start strengths-weaknesse */
-
-.container {
-  /* margin: 0; */
-  background-color: rgb(184, 184, 185, 0.2);
 }
 .strengths-weaknesses {
   display: flex;
@@ -73,3 +75,23 @@
 }
 
 /* Finish strengths-weaknesse */
+
+@media all and (min-width: 768px) {
+  .about {
+    max-width: 80%;
+  }
+  .strengths-weaknesses {
+  display: flex;
+  flex-direction: row;
+  max-width: 80%; */
+  /* justify-content: center; */
+  /* align-items: center; */
+  }
+}
+
+@media all and (min-width: 1200px){
+    .about{
+        max-width: 50%;
+    }
+
+}
