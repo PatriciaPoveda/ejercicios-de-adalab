@@ -29,32 +29,15 @@
 
 /* Finish TEAM */
 
-/* .square {
-    height: 25px;
-    width: 25px;
-    background-color: black;
-    position: relative;
-    transform: rotate(45deg);
-    left: 50%;
-    bottom: 180px;
-  } */
-/* .square {
-    background-color: #fff;
-    width: 30px;
-    height: 30px;
-    position: absolute;
-    left: 50%;
-    top: 0;
-    transform: translate(-50%, -50%) rotate(45deg); */
-/* } */
-/* .square::before {
-    width: 20px;
-    height: 20px;
-    border-left: 50px solid;
-    border-right: 50px solid;
-    border-top: 100px solid red;
-    background-color: thistle;
-  } */
+.square {
+  height: 50px;
+  width: 50px;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translate(0, -50%) rotate(-45deg);
+}
 /* Start strengths-weaknesse */
 
 .container {
