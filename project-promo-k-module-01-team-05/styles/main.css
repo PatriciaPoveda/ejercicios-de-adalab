@@ -46,7 +46,14 @@
   top: 0;
   transform: translate(-50%, -50%) rotate(45deg); */
 /* } */
-
+/* .square::before {
+  width: 20px;
+  height: 20px;
+  border-left: 50px solid;
+  border-right: 50px solid;
+  border-top: 100px solid red;
+  background-color: thistle;
+} */
 /* Start strengths-weaknesse */
 
 .container {
