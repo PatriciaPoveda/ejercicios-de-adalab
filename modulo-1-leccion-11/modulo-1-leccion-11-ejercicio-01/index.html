@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="form">
+      <form action="" method="post">
+        <label for="firstname">Nombre</label>
+        <input
+          placeholder="Jon"
+          id="firstname"
+          type="text"
+          name="firstname"
+          required
+        />
+        <label for="lastname">Apellido</label>
+        <input
+          placeholder="Snow"
+          id="lastname"
+          type="text"
+          name="lastname"
+          required
+        />
+        <label for="mail">Correo Electrónico</label>
+        <input id="mail" type="email" name="emailaddress" />
+        <label for="telephone">Telefono</label>
+        <input id="telephone" type="tel" name="telephone" />
+        <label for="address">Dirección</label>
+        <input
+          id="address"
+          type="text"
+          name="address"
+          value="Calle Mendez Alvaro"
+        />
+
+        <label for="city">City</label>
+        <input id="city" type="text" name="city" value="Madrid" required />
+        <label for="country">Country</label>
+        <input
+          id="country"
+          type="text"
+          name="country"
+          value="España"
+          required
+        />
+        <label for="DNI">DNI</label>
+        <input id="DNI" type="text" name="DNI" disabled />
+        <label for="password">Contraseña</label>
+        <input id="password" type="password" name="password" required />
+        <input type="submit" value="Enviar Información" />
+      </form>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Create an account</h1>
+    <h2>It´s free and always will be</h2>
+    <form action="" method="POST">
+      <label for="firstname"></label>
+      <input
+        placeholder="First name"
+        id="firstname"
+        type="text"
+        name="firstname"
+      />
+      <label for="lastname"></label>
+      <input
+        placeholder="Surname"
+        id="lastname"
+        type="text"
+        name="lastname"
+        required
+      />
+      <label for="mailtelephone"></label>
+      <input
+        placeholder="Email or mobile number"
+        id="mailtelephone"
+        type="text"
+        name="emailtelephone"
+      />
+      <!-- <label for="mail" for="telephone"></label>
+      <input
+        placeholder="Email or mobile number"
+        id="mail"
+        id="telephone"
+        type="email"
+        type="tel"
+        name="emailtelephone"
+      /> -->
+      <label for="mail" for="telephone"></label>
+      <input
+        placeholder="Re-enter email or mobile number"
+        id="mail"
+        id="telephone"
+        type="email"
+        type="tel"
+        name="emailtelephone"
+      />
+      <label for="password"></label>
+      <input id="password" type="New password" name="password" />
+      <form action="" method="POST">
+        <div>
+          <h4>Birthday</h4>
+          <label for="Day"></label>
+          <select id="Day" name="Day">
+            <option value="36">Day</option>
+            <option value="37">37</option>
+            <option value="38">38</option>
+            <option value="39">39</option>
+            <option value="40">40</option>
+            <option value="41">41</option>
+            <option value="42">42</option>
+            <option value="43">43</option>
+            <option value="44">44</option>        
+          </select>
+        </div>
+        <div>
+          <label for="Month"></label>
+          <select id="Month" name="Month">
+            <option value="37">Month</option>
+            <option value="36">36</option>
+            <option value="38">38</option>
+            <option value="39">39</option>
+            <option value="40">40</option>
+            <option value="41">41</option>
+            <option value="42">42</option>
+            <option value="43">43</option>
+            <option value="44">44</option>        
+          </select>
+        </div>
+        <div>
+          <label for="year"></label>
+          <select id="year" name="year">
+            <option value="37">Year</option>
+            <option value="36">36</option>
+            <option value="38">38</option>
+            <option value="39">39</option>
+            <option value="40">40</option>
+            <option value="41">41</option>
+            <option value="42">42</option>
+            <option value="43">43</option>
+            <option value="44">44</option>        
+          </select>
+        </div>
+
+      <div>
+        <label for="Female">
+          <input
+            id="Female"
+            type="radio"
+            value="debitcard"
+            name="Female"
+          />
+          Female
+        </label>
+      </div>
+      <div>
+        <label for="Male">
+          <input
+            id="Male"
+            type="radio" value="creditcard"
+            name="Male"
+          />
+          Male
+        </label>
+      </div>
+      <input type="submit" value="Create an account" />
+    </form>
+  </body>
+</html>
