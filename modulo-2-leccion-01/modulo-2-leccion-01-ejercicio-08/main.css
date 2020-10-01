@@ -1,0 +1,9 @@
+.button-a,
+.button-b {
+  border: 2px solid red;
+  padding: 10px;
+  background-color: blue;
+}
+.hidden {
+  opacity: 0;
+}

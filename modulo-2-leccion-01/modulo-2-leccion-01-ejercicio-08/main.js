@@ -1,4 +1,5 @@
 "use strict";
 const buttonB = document.querySelector(".button-b");
-buttonB;
-buttonB.classList.add;
+const buttonA = document.querySelector("button-a");
+
+buttonB.classList.add("hidden");
