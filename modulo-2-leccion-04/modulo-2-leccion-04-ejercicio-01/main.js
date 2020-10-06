@@ -16,10 +16,27 @@ console.log(mediaResult);
 function price(a) {
   const sinIva = a - (a * 21) / 100;
   const iva = (a * 21) / 100;
-  return sinIva, iva, a;
+  // return sinIva, iva, a;
+  console.log(`Precio sin IVA: ${sinIva}, IVA: ${iva} y Total: ${a}.`);
 }
-const priceResult = price(15);
-// console.log(Precio sin IVA: sinIva, IVA: iva y Total: a);
+price(20);
+
+// EJERCICIO 04
+function parImpar(number) {
+  if (number % 2 === 0) {
+    console.log("par");
+  } else {
+    console.log("impar");
+  }
+}
+
+parImpar(5496);
+
+// // EJERCICIO 05
+// const getEl = document.querySelector;
+// const btnEl = getEl('.btn');
+
+// function getEl()
 
 // EJERCICIO 08
 // modificamos una variable de ámbito global
