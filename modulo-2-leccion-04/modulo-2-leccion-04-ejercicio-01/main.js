@@ -24,20 +24,47 @@ price(20);
 // EJERCICIO 04
 function parImpar(number) {
   if (number % 2 === 0) {
-    console.log("par");
+    console.log("true");
   } else {
-    console.log("impar");
+    console.log("false");
   }
 }
-
-parImpar(5496);
+parImpar(549);
 
 // // EJERCICIO 05
-// const getEl = document.querySelector;
-// const btnEl = getEl('.btn');
-
-// function getEl()
-
+const name = "document.querySelector";
+function getEl(p){
+   return name + p ;
+  }
+  let btnEl = getEl("('.btn')");
+  console.log(btnEl);
+// EJERCICIO 06
+btnEl = getEl("");
+if (btnEl === getEl("")){
+console.error("No existe ningún elemento con clase, id o tag llamado {btnEl}");
+} else{
+  console.log(btnEl);
+}
+// EJERCICIO 07
+function getEl(p){
+  return name + (p);
+ }
+ let numberEl = getEl("('.number')");
+ console.log(numberEl);
+numberEl = document.querySelector(".number");
+const content = numberEl.innerHTML;
+console.log(content);
+const realNumber = parseInt(content);
+console.log(realNumber);
+ 
+ function parImpar(number) {
+  if (number % 2 === 0) {
+    console.log("Este número es PAR");
+  } else {
+    console.log("Este número es IMPAR");
+  }
+}
+parImpar(realNumber);
 // EJERCICIO 08
 // modificamos una variable de ámbito global
 let secretLetter = "y";
