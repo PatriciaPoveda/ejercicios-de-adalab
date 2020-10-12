@@ -32,26 +32,27 @@ function parImpar(number) {
 parImpar(549);
 
 // // EJERCICIO 05
-const name = "document.querySelector";
-function getEl(p){
-   return name + p ;
+function getEl(classEl){
+  const name = document.querySelector(classEl); 
+  return name;
   }
-  let btnEl = getEl("('.btn')");
+  const btnEl = getEl('.btn');
   console.log(btnEl);
+  btnEl.innerHTML = "HOLA";
+  
 // EJERCICIO 06
-btnEl = getEl("");
-if (btnEl === getEl("")){
-console.error("No existe ningún elemento con clase, id o tag llamado {btnEl}");
-} else{
-  console.log(btnEl);
-}
+// btnEl = getEl("");
+// if (btnEl === getEl("")){
+// console.error("No existe ningún elemento con clase, id o tag llamado {btnEl}");
+// } else{
+//   console.log(btnEl);
+// }
 // EJERCICIO 07
-function getEl(p){
-  return name + (p);
- }
- let numberEl = getEl("('.number')");
- console.log(numberEl);
-numberEl = document.querySelector(".number");
+function getEl(classEl){
+  const name = document.querySelector(classEl); 
+  return name;
+  }
+const numberEl = getEl('.number');
 const content = numberEl.innerHTML;
 console.log(content);
 const realNumber = parseInt(content);
