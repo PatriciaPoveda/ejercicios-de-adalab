@@ -8,6 +8,7 @@ function getEmoji() {
     });
 }
 document.querySelector('.js-emoji').addEventListener("click", getEmoji);
+ 
 
 
 // EJERCICIO 01
@@ -46,5 +47,5 @@ document.querySelector('.js-emoji').addEventListener("click", getEmoji);
   })
 }
 
-
  btn3.addEventListener("click", getInfoUser);
+

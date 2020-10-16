@@ -12,6 +12,6 @@ function workWithMovies(){
 }
 workWithMovies()
 // EJERCICIO 02
-// for (let i = 1; i < 11; i++) {
-//     console.log('Voy por la vuelta ' + i);
-//   }
+for (let i = 1; i < 11; i++) {
+    console.log('Voy por la vuelta ' + i);
+  }
