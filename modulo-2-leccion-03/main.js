@@ -1,17 +1,18 @@
 "use strict";
+
 // Ejercicio 01
+
 const nombre = document.querySelector(".user__name");
 const imagen = document.querySelector(".user__avatar");
-// avatar por defecto
 const DEFAULT_AVATAR = "http://placehold.it/300x300";
-// avatar que eligió el usuario al registrarse
 let userAvatar = "http://www.fillmurray.com/300/300";
-// imagen.setAttribute("src", userAvatar);
 let userNombre = "";
 userNombre= "Bill";
 nombre.innerHTML = userNombre;
 imagen.src = userAvatar || DEFAULT_AVATAR;
+
 // Ejercicio 02
+
 const name1 = "Celia";
 const name2 = "Marina";
 let allName = name2;
@@ -26,7 +27,9 @@ if (allName === name1) {
 } else {
   console.log("Lo siento pero el usuario que has introducido no está registrado");
 }
+
 // Ejercicio 03
+
 const number = 37;
 if (number === 0) {
   console.log('El número es 0');
@@ -39,7 +42,9 @@ if (number === 0) {
 } else {
   console.log('el número no es 123123125');
 }
+
 // Ejercicio 04
+
 const yearOne = 15;
 const yearTwo = 9;
 const restYear = 5;
@@ -55,7 +60,9 @@ else if (dogYears === 2){
 else {
   console.log(`El perro tiene ${(yearOne + yearTwo) + (dogYears - 2) * restYear} años humanos`);
 }
+
 // Ejercicio 05
+
 const containerElement = document.querySelector(".container");
 const title5Element = document.querySelector(".title5");
 const messageElement = document.querySelector(".message");
@@ -71,7 +78,9 @@ else if (containerElement.classList.contains("success")){
   title5Element.innerHTML = "CORRECTO";
   messageElement.innerHTML = "Los datos son correctos";
 }
+
 // Ejercicio 06
+
 let avocados;
 const avocadoPrice = 1.5;
 const money = 33;
@@ -82,7 +91,9 @@ if (money >= avocadoPrice) {
   avocados = 0;
 }
 money >= avocadoPrice ? (avocados = money / avocadoPrice) : (avocados = 0);
+
 // PRACTICA de SWITCH
+
 const todayDate = "Lunes";
 
 switch (todayDate) {
@@ -107,7 +118,9 @@ switch (todayDate) {
   default:
     console.log("Dormir hasta las 12");
 }
+
 // Ejercicio 07
+
 let ingredient = "Pollo";
 
 switch (ingredient) {
@@ -121,7 +134,9 @@ switch (ingredient) {
     console.log("Espinacas rehogadas");
     break;
 }
+
 // Ejercicio 08
+
 const year = 2020;
 const allBisiestos = year % 4 === 0;
 if (allBisiestos){
