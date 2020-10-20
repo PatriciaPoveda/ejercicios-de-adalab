@@ -28,7 +28,7 @@ telephone: "555555555"
 console.log(peopleList[0].name);
 const selectEl = document.querySelector(".select");
 const inputList = document.querySelectorAll(".input");
-                                                               
+                           
 function fillForm(){
   for (let i = 0; i < peopleList.length; i++) {
     const element = peopleList[i];
