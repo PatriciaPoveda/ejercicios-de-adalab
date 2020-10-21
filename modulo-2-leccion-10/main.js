@@ -38,13 +38,15 @@ document.querySelector('.js-emoji').addEventListener("click", getEmoji);
  const btn3 = document.querySelector(".js-btn");
  function getInfoUser(){
    const username = document.querySelector(".js-input3").value;
-   console.log(username);
   fetch(`https://api.github.com/users/${username}`)
   .then(response => response.json())
   .then(data => {
-    const nameEl3 = document.querySelector(".js-name3");
+    console.log(data.login);
+    document.querySelector(".js-name3").innerHTML += data.login;
+    document.querySelector(".js-repositorios3").innerHTML += data.public_repos;
+    document.querySelector(".js-avatar3").src += data.avatar_url;
 
-  })
+  });
 }
 
  btn3.addEventListener("click", getInfoUser);
