@@ -51,3 +51,22 @@ document.querySelector('.js-emoji').addEventListener("click", getEmoji);
 
  btn3.addEventListener("click", getInfoUser);
 
+// const btnSearch = document.querySelector('.js-btn');
+// let names = [];
+// let images = [];
+// function getSerie(){
+//   const query = document.querySelector('.js-input3').value;
+//   fetch(`http://api.tvmaze.com/search/shows?q=${query}`)
+//   .then(response => response.json())
+//   .then(data => {
+//     for (let i = 0; i < data.length; i++) {
+//       names = data[i].show.name;
+//       console.log(names);
+//       images = data[i].show.image.medium;
+//       const info = `${names} ${images}`;
+//       console.log(info);
+      
+//     }
+//     })
+// };
+// btnSearch.addEventListener('click', getSerie);
