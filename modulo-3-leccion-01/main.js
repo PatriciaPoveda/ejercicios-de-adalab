@@ -89,6 +89,7 @@ fetch("http://api.igarrido.es/adalab.json")
   .then((Response) => Response.json())
   .then((data) => {
     adalabers = data;
+    bucle();
   });
 
 class adalaber {
@@ -99,15 +100,19 @@ class adalaber {
   }
   render() {
     const name = document.querySelector(".js-text");
-    name.innerHTML = `nombre: ${this.fullname}`;
+    return (name.innerHTML += `nombre: ${this.fullname}`);
   }
 }
-let fullname;
-let promo;
-let github;
-for (let i = 0; i < adalabers.length; i++) {
-  fullname = adalabers.fullname;
-  promo = adalabers.promo;
-  github = adalabers.github;
+
+function bucle() {
+  let fullname;
+  let promo;
+  let github;
+  for (let i = 0; i < adalabers.length; i++) {
+    fullname = adalabers[i].fullname;
+    promo = adalabers[i].promo;
+    github = adalabers[i].github;
+    const adalab = new adalaber(fullname, promo, github);
+    adalab.render();
+  }
 }
-const adalab = new adalaber(fullname, promo, github);
