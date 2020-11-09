@@ -4,12 +4,17 @@ import "./App.scss";
 class Hija extends React.Component {
   constructor(porps) {
     super(porps);
-    // console.log(porps);
     this.llamarAMama = this.llamarAMama.bind(this);
+    this.state = {
+      styling: "hidden",
+    };
   }
   llamarAMama() {
     this.props.pagarClase();
-    this.text.classList.remove(".hidden");
+
+    this.setState({
+      styling: "show",
+    });
   }
   render() {
     return (
@@ -25,7 +30,7 @@ class Hija extends React.Component {
         </p>
 
         <button onClick={this.llamarAMama}>Dar la clase</button>
-        <div className="Xhidden text">
+        <div className={`${this.state.styling}`}>
           <p>
             <strong>
               (evento: al hacer click en botón llama a la función{" "}

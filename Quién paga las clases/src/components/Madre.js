@@ -30,6 +30,7 @@ class Madre extends React.Component {
           story5="Entonces, una vez que dió la clase la hija,"
           story6="llamó a su madre y le recordó que tenía que pagar la clase."
         />
+        <p>{this.props.story7}</p>
       </div>
     );
   }
