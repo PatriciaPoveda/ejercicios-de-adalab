@@ -1,11 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./stylesheets/index.scss";
-import AppAbuela from "./components/AppAbuela";
+import App from "./components/App";
 
 ReactDOM.render(
   <React.StrictMode>
-    <AppAbuela />
+    <App />
   </React.StrictMode>,
   document.getElementById("root")
 );
