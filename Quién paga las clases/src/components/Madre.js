@@ -25,12 +25,12 @@ class Madre extends React.Component {
         </p>
         <Hija
           pagarClase={this.pagarLaClase}
-          story3='Y la hija le contestó: "Gracias por decírmelo, mama". '
-          story4=' "Te avisaré cuando haya dado la clase para que pagues a la profesora". '
-          story5="Entonces, una vez que dió la clase la hija,"
-          story6="llamó a su madre y le recordó que tenía que pagar la clase."
+          story3={this.props.story3}
+          story4={this.props.story4}
+          story5={this.props.story5}
+          story6={this.props.story6}
         />
-        <p>{this.props.story7}</p>
+        {/* <p>{this.props.story8}</p> */}
       </div>
     );
   }
