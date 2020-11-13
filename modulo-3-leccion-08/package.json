@@ -1,5 +1,4 @@
 {
-  "homepage": "./",
   "name": "my-template",
   "version": "0.1.0",
   "private": true,
@@ -39,5 +38,6 @@
   },
   "devDependencies": {
     "sass": "^1.28.0"
-  }
+  },
+  "homepage": "./"
 }
