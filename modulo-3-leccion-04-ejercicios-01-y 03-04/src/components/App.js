@@ -18,7 +18,7 @@ const arrayOfItems = [
   },
   {
     name: "Agua mineral",
-    description: "Agua de un charco del Himalaya",
+    // description: "Agua de un charco del Himalaya",
     quantity: 2,
     category: "Bebida",
     price: 5,
@@ -26,11 +26,21 @@ const arrayOfItems = [
 ];
 class App extends React.Component {
   render() {
-    return (
-      <div className="App">
-        <ItemList arrayIt={arrayOfItems} />
-      </div>
-    );
+    const filterPrice = arrayOfItems.filter((array) => {
+      return array.price < 10;
+    });
+    const htmlCode = filterPrice.map((array, i) => {
+      return (
+        <li className="App" key={i}>
+          <ItemList
+            name={array.name}
+            description={array.description}
+            price={array.price}
+          />
+        </li>
+      );
+    });
+    return <ul>{htmlCode}</ul>;
   }
 }
 

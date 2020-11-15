@@ -8,7 +8,7 @@ class Form extends React.Component {
     this.handleChange = this.handleChange.bind(this);
     this.handleChange2 = this.handleChange2.bind(this);
     this.state = {
-      name: "Miguel",
+      name: "Psicosis",
       description: "",
     };
   }
