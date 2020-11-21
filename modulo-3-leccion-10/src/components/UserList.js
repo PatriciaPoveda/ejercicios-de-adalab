@@ -3,7 +3,6 @@ import UserItem from "./UserItem";
 import "./UserList.scss";
 
 const UserList = (props) => {
-
   return (
     <section className="users">
       <ul className="users__list">
@@ -15,10 +14,10 @@ const UserList = (props) => {
       </ul>
     </section>
   );
-}
+};
 
 UserList.propTypes = {
-  list: PropTypes.arrayOf(PropTypes.object).isRequired
+  list: PropTypes.arrayOf(PropTypes.object).isRequired,
 };
 
 export default UserList;
