@@ -11,8 +11,8 @@ class square {
   }
 }
 const objSquare = new square();
-console.log(objSquare.perimeter(9));
-console.log(objSquare.area(9));
+console.log(`El perímetro del cuadrado es: ${objSquare.perimeter(9)}`);
+console.log(`El área del cuadrado es:  ${objSquare.area(9)}`);
 
 // EJERCICIO 02
 
@@ -29,22 +29,22 @@ class square2 {
 }
 
 const objSquare2 = new square2(9);
-console.log(objSquare2.perimeter());
-console.log(objSquare2.area());
+console.log(`El perímetro del cuadrado es: ${objSquare2.perimeter()}`);
+console.log(`El área del cuadrado es:  ${objSquare2.area()}`);
 
 const objSquareA = new square2(1);
-console.log(objSquareA.perimeter());
-console.log(objSquareA.area());
+console.log(`El perímetro del cuadrado es: ${objSquareA.perimeter()}`);
+console.log(`El área del cuadrado es:  ${objSquareA.area()}`);
 
 const objSquareB = new square2(3);
-console.log(objSquareB.perimeter());
-console.log(objSquareB.area());
+console.log(`El perímetro del cuadrado es: ${objSquareB.perimeter()}`);
+console.log(`El área del cuadrado es:  ${objSquareB.area()}`);
 
 const objSquareC = new square2(7);
-console.log(objSquareC.perimeter());
-console.log(objSquareC.area());
+console.log(`El perímetro del cuadrado es: ${objSquareC.perimeter()}`);
+console.log(`El área del cuadrado es:  ${objSquareC.area()}`);
 
-// EJERCICIO 03
+// EJERCICIO BONUS A
 
 class Polygon {
   constructor(side, base, height) {
@@ -78,10 +78,10 @@ const objPolygon3 = new Polygon();
 const objSquare3 = new square3(4);
 const triangle3 = new triangle(4, 3);
 
-console.log(objSquare3.perimeter());
-console.log(objSquare3.area());
-console.log(triangle3.perimeter());
-console.log(triangle3.area());
+console.log(`El perímetro del cuadrado es: ${objSquare3.perimeter()}`);
+console.log(`El área del cuadrado es:  ${objSquare3.area()}`);
+console.log(`El perímetro del triángulo es: ${triangle3.perimeter()}`);
+console.log(`El área del triángulo es:  ${triangle3.area()}`);
 
 // EJERCICIO PAIR
 let adalabers = [];
@@ -100,7 +100,19 @@ class adalaber {
   }
   render() {
     const name = document.querySelector(".js-text");
-    return (name.innerHTML += `nombre: ${this.fullname}`);
+    let html = "";
+    html += `<div>`;
+    html += `<p>`;
+    html += `NOMBRE: ${this.fullname}`;
+    html += `</p>`;
+    html += `<p>`;
+    html += `PROMO: ${this.promo}`;
+    html += `</p>`;
+    html += `<p>`;
+    html += `GITHUB: ${this.github}`;
+    html += `</p>`;
+    html += `</div>`;
+    return (name.innerHTML += html);
   }
 }
 
