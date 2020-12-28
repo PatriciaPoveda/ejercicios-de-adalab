@@ -1,16 +1,21 @@
 .displays {
   height: 100px;
-  width: 100;
+  width: 100px;
+  text-align: center;
 }
 .lorem--1 {
   display: block;
+  background-color: red;
 }
 .lorem--2 {
   display: inline;
+  background-color: royalblue;
 }
 .lorem--3 {
   display: none;
+  background-color: seagreen;
 }
 .lorem--4 {
   display: inline-block;
+  background-color: sienna;
 }
