@@ -4,7 +4,7 @@ import image from "../images/Baby-Yoda.jpeg";
 
 class App extends React.Component {
   render() {
-    return (
+    const card = (
       <div className="container">
         <main className="card">
           <header className="data">
@@ -52,6 +52,7 @@ class App extends React.Component {
         </main>
       </div>
     );
+    return card;
   }
 }
 

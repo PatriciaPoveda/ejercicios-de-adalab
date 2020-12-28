@@ -1,3 +1,4 @@
+@import "vars";
 * {
   box-sizing: border-box;
   margin: 0;
@@ -26,20 +27,20 @@
   &__container {
     margin-left: 30px;
     &--name {
-      font-family: "Open Sans", sans-serif;
+      font-family: $font;
       color: gray;
       margin-bottom: 5px;
     }
     &--cita {
-      color: rgb(112, 111, 111);
+      color: $color;
       margin-top: 5px;
     }
   }
 }
 .text {
   margin-top: 20px;
-  font-family: "Open Sans", sans-serif;
-  color: rgb(112, 111, 111);
+  font-family: $font;
+  color: $color;
 }
 .footer {
   display: flex;
