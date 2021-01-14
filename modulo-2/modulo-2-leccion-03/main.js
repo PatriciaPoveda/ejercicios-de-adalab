@@ -7,7 +7,7 @@ const imagen = document.querySelector(".user__avatar");
 const DEFAULT_AVATAR = "http://placehold.it/300x300";
 let userAvatar = "http://www.fillmurray.com/300/300";
 let userNombre = "";
-userNombre= "Bill";
+userNombre = "Bill";
 nombre.innerHTML = userNombre;
 imagen.src = userAvatar || DEFAULT_AVATAR;
 
@@ -21,26 +21,28 @@ allName = "Patricia";
 if (allName === name1) {
   const nameX = `Bienvenida, ${name1}`;
   console.log(nameX);
-} else if (allName === name2){
+} else if (allName === name2) {
   const nameY = `Bienvenida, ${name2}`;
-  console.log(nameY)
+  console.log(nameY);
 } else {
-  console.log("Lo siento pero el usuario que has introducido no está registrado");
+  console.log(
+    "Lo siento pero el usuario que has introducido no está registrado"
+  );
 }
 
 // Ejercicio 03
 
 const number = 37;
 if (number === 0) {
-  console.log('El número es 0');
+  console.log("El número es 0");
 } else if (number < 0) {
-  console.log('El número es negativo');
+  console.log("El número es negativo");
 } else if (number + 2 > 13 && number <= 20) {
-  console.log('El número más 2 es mayor que 13 pero menor o igual que 20');
+  console.log("El número más 2 es mayor que 13 pero menor o igual que 20");
 } else if (number > 20 && number < 50) {
-  console.log('El número es mayor que 20 pero menor que 50');
+  console.log("El número es mayor que 20 pero menor que 50");
 } else {
-  console.log('el número no es 123123125');
+  console.log("el número no es 123123125");
 }
 
 // Ejercicio 04
@@ -51,14 +53,16 @@ const restYear = 5;
 let dogYears = 1;
 dogYears = 2;
 dogYears = 3;
-if (dogYears === 1){
+if (dogYears === 1) {
   console.log(`El perro tiene ${yearOne} años humanos`);
-}
-else if (dogYears === 2){
+} else if (dogYears === 2) {
   console.log(`El perro tiene ${yearOne + yearTwo} años humanos`);
-}
-else {
-  console.log(`El perro tiene ${(yearOne + yearTwo) + (dogYears - 2) * restYear} años humanos`);
+} else {
+  console.log(
+    `El perro tiene ${
+      yearOne + yearTwo + (dogYears - 2) * restYear
+    } años humanos`
+  );
 }
 
 // Ejercicio 05
@@ -66,15 +70,13 @@ else {
 const containerElement = document.querySelector(".container");
 const title5Element = document.querySelector(".title5");
 const messageElement = document.querySelector(".message");
-if (containerElement.classList.contains("warning")){
+if (containerElement.classList.contains("warning")) {
   title5Element.innerHTML = "AVISO";
   messageElement.innerHTML = "Tenga Cuidado";
-}
-else if (containerElement.classList.contains("error")){
+} else if (containerElement.classList.contains("error")) {
   title5Element.innerHTML = "ERROR";
   messageElement.innerHTML = "Ha surgido un error";
-}
-else if (containerElement.classList.contains("success")){
+} else if (containerElement.classList.contains("success")) {
   title5Element.innerHTML = "CORRECTO";
   messageElement.innerHTML = "Los datos son correctos";
 }
@@ -137,18 +139,31 @@ switch (ingredient) {
 
 // Ejercicio 08
 
-const year = 2020;
-const allBisiestos = year % 4 === 0;
-if (allBisiestos){
-  console.log("Bisiesto");
-}
+const year = 2021;
+const allBisiestos = year % 4;
 
+switch (allBisiestos) {
+  case 0:
+    console.log("bisiesto");
+    break;
+  case 1:
+    console.log(year + 3);
+    break;
+  case 2:
+    console.log(year + 2);
+    break;
+  case 3:
+    console.log(year + 1);
+    break;
+}
 
 // OR
 const isAdmin = false;
-const adminText = isAdmin && 'administradora';
+const adminText = isAdmin && "administradora";
 const isModerator = true;
-const moderatorText = isModerator && 'moderadora';
+const moderatorText = isModerator && "moderadora";
 
 // Como la primera expresión es `falsy`, se devuelve la segunda expresión
-console.log(`Bienvenida ${adminText || moderatorText}. ¡Es genial verte de nuevo!`);
+console.log(
+  `Bienvenida ${adminText || moderatorText}. ¡Es genial verte de nuevo!`
+);
