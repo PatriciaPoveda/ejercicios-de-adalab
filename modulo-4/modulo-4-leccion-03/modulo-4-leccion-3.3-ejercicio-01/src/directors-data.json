@@ -1,0 +1,15 @@
+[
+  {
+    "id": "1",
+    "name": "Icíar Bollaín",
+    "country": "España",
+    "birth_year": "2003",
+    "awards": "7"
+  },
+  {
+    "id": "2",
+    "name": "Pilar Miró",
+    "country": "España",
+    "birth_year": "1996"
+  }
+]
