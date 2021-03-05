@@ -32,12 +32,13 @@ app.get("/es/film:filmId.html", (req, res) => {
     filmData.year = filmData.year || "";
     filmData.director = filmData.director || "";
     filmData.country = filmData.country || "";
+    filmData.filterAwards = [];
     // response with rendered template
     if (filmYear) {
-      filmData.awards =
+      filmData.filterAwards =
         filmData.awards.filter((award) => award.year === filmYear) || [];
     } else {
-      filmData.awards = filmData.awards || [];
+      filmData.filterAwards = filmData.awards || [];
     }
     res.render("pages/film", filmData);
   } else {
