@@ -19,8 +19,17 @@ const getUserByEmailAndPassword = (email, password) => {
   return user;
 };
 
+const getSignUp = (email, password) => {
+  const query = data.db.prepare(
+    `INSERT INTO users (email, password) VALUES (?, ?)`
+  );
+  const signUpUser = query.run(email, password);
+  return signUpUser;
+};
+
 module.exports = {
   // isValidUserId: isValidUserId,
   getUserById: getUserById,
   getUserByEmailAndPassword: getUserByEmailAndPassword,
+  getSignUp: getSignUp,
 };

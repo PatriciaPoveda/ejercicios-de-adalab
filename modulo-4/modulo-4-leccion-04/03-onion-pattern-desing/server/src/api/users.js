@@ -1,20 +1,37 @@
 // this file knows what to response
 // this file requests data from the data folder
-const usersData = require('../data/users');
+const usersData = require("../data/users");
 
 // endpoint handler POST:/api/login
 const login = (req, res) => {
-  const userFound = usersData.getUserByEmailAndPassword(req.body.email, req.body.password);
-  console.log('POST:/api/login > userFound:', userFound);
+  const userFound = usersData.getUserByEmailAndPassword(
+    req.body.email,
+    req.body.password
+  );
+  console.log("POST:/api/login > userFound:", userFound);
   if (userFound) {
     res.json({
       error: false,
-      userId: userFound.id
+      userId: userFound.id,
     });
   } else {
     res.status(404).json({
-      error: 'user-not-found',
-      message: 'User not found'
+      error: "user-not-found",
+      message: "User not found",
+    });
+  }
+};
+const signUp = (req, res) => {
+  const userSignUp = usersData.getSignUp(req.body.email, req.body.password);
+  if (userSignUp) {
+    res.json({
+      result: "User created",
+      // userId: result.lastInsertRowid,
+    });
+  } else {
+    res.status(404).json({
+      error: "user-not-registered",
+      message: "User not registered",
     });
   }
 };
@@ -22,21 +39,22 @@ const login = (req, res) => {
 // endpoint handler GET:/api/user
 const getUser = (req, res) => {
   const userFound = usersData.getUserById(req.query.userId);
-  console.log('GET:/api/user > userFound:', userFound);
+  console.log("GET:/api/user > userFound:", userFound);
   if (userFound) {
     res.json({
       error: false,
-      user: userFound
+      user: userFound,
     });
   } else {
     res.status(404).json({
-      error: 'user-not-found',
-      message: 'User not found'
+      error: "user-not-found",
+      message: "User not found",
     });
   }
 };
 
 module.exports = {
   getUser: getUser,
-  login: login
+  login: login,
+  signUp: signUp,
 };

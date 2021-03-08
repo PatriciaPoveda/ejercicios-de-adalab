@@ -1,27 +1,28 @@
-import React, { useState, useEffect } from 'react';
-import { Route, Switch } from 'react-router-dom';
-import Cart from './cart/List';
-import Login from './user/Login';
-import Profile from './user/Profile';
-import Products from './products/List';
-import ProductDetail from './products/Detail';
-import api from '../services/api';
-import shop from '../services/shop';
-import localStorage from '../services/localStorage';
+import React, { useState, useEffect } from "react";
+import { Route, Switch } from "react-router-dom";
+import Cart from "./cart/List";
+import Login from "./user/Login";
+import Profile from "./user/Profile";
+import Products from "./products/List";
+import ProductDetail from "./products/Detail";
+import api from "../services/api";
+import shop from "../services/shop";
+import localStorage from "../services/localStorage";
 
 const App = () => {
   // state
-  const localStorageUser = localStorage.get('user');
-  const [userId, setUserId] = useState(localStorageUser.userId || '');
+  const localStorageUser = localStorage.get("user");
+  const [userId, setUserId] = useState(localStorageUser.userId || "");
   const [userData, setUserData] = useState({});
-  const [loginError, setLoginError] = useState('');
+  const [loginError, setLoginError] = useState("");
+  const [signUpError, setSignUpError] = useState("");
   const [shopProducts, setShopProducts] = useState([]);
   const [cartProducts, setCartProducts] = useState([]);
-  const [filterText, setFilterText] = useState('');
+  const [filterText, setFilterText] = useState("");
 
   // effects: obtengo los productos al arrancar la página
   useEffect(() => {
-    api.getProducts().then(data => {
+    api.getProducts().then((data) => {
       setShopProducts(data);
     });
   }, []);
@@ -30,7 +31,7 @@ const App = () => {
   useEffect(() => {
     // si el userId es diferente de vacío pido el carro de la compra al servidor
     if (userId) {
-      api.getCart(userId).then(data => {
+      api.getCart(userId).then((data) => {
         setCartProducts(data);
       });
     }
@@ -40,7 +41,7 @@ const App = () => {
   useEffect(() => {
     // si el userId es diferente de vacío pido el carro de la compra al servidor
     if (userId) {
-      api.getUser(userId).then(data => {
+      api.getUser(userId).then((data) => {
         setUserData(data);
       });
     }
@@ -57,48 +58,70 @@ const App = () => {
 
   // events
 
-  const handleLogin = data => {
-    api.sendLogin(data).then(data => {
+  const handleLogin = (data) => {
+    api.sendLogin(data).then((data) => {
       if (data.error) {
         // guardo el error en el estado para que se pinte
         setLoginError(data.message);
       } else {
         // limpio el error
-        setLoginError('');
+        setLoginError("");
         // guardo el usuario en el estado y en localStorage
         setUserId(data.userId);
-        localStorage.set('user', data);
+        localStorage.set("user", data);
       }
     });
   };
+  const handleSignUp = (data) => {
+    api.sendSignUp(data).then((data) => {
+      if (data.error) {
+        // guardo el error en el estado para que se pinte
+        setSignUpError(data.message);
+      } else {
+        // limpio el error
+        setSignUpError("");
+        // guardo el usuario en el estado y en localStorage
+        // setUserId(data.userId);
+        // localStorage.set("user", data);
+      }
+      console.log(data);
+    });
+  };
 
-  const handleFilter = filterText => {
+  const handleFilter = (filterText) => {
     setFilterText(filterText);
   };
 
-  const incrementCartProduct = clickedProductId => {
-    const newCartProducts = shop.incrementCartProduct(shopProducts, cartProducts, clickedProductId);
+  const incrementCartProduct = (clickedProductId) => {
+    const newCartProducts = shop.incrementCartProduct(
+      shopProducts,
+      cartProducts,
+      clickedProductId
+    );
     updateCart(newCartProducts);
   };
 
-  const decrementCartProduct = clickedProductId => {
-    const newCartProducts = shop.decrementCartProduct(cartProducts, clickedProductId);
+  const decrementCartProduct = (clickedProductId) => {
+    const newCartProducts = shop.decrementCartProduct(
+      cartProducts,
+      clickedProductId
+    );
     updateCart(newCartProducts);
   };
 
-  const deleteCartProduct = clickedProductId => {
+  const deleteCartProduct = (clickedProductId) => {
     shop.deleteCartProduct(cartProducts, clickedProductId);
     updateCart(cartProducts);
   };
 
-  const updateCart = cartProducts => {
+  const updateCart = (cartProducts) => {
     setCartProducts([...cartProducts]);
     api.sendCart(userId, cartProducts);
   };
 
   const handleCloseSession = () => {
     // borro el local storage del navegador
-    localStorage.remove('user');
+    localStorage.remove("user");
     // refresco la página para que la web se reinicie
     window.location.reload();
     // no hace falta enviar nada al servidor porque el servidor no sabe
@@ -108,13 +131,22 @@ const App = () => {
   // render
 
   const renderLogin = () => {
-    return <Login loginError={loginError} handleLogin={handleLogin} />;
+    return (
+      <Login
+        loginError={loginError}
+        signUpError={signUpError}
+        handleLogin={handleLogin}
+        handlesignUp={handleSignUp}
+      />
+    );
   };
 
   const parseCartProducts = () => {
-    const newCartProducts = cartProducts.map(cartProduct => {
+    const newCartProducts = cartProducts.map((cartProduct) => {
       const cartProductId = cartProduct.id;
-      const shopProduct = shopProducts.find(shopProduct => shopProduct.id === cartProductId);
+      const shopProduct = shopProducts.find(
+        (shopProduct) => shopProduct.id === cartProductId
+      );
       return {
         id: shopProduct.id,
         description: shopProduct.description,
@@ -122,7 +154,7 @@ const App = () => {
         name: shopProduct.name,
         price: shopProduct.price,
         sizes: shopProduct.sizes,
-        units: cartProduct.units
+        units: cartProduct.units,
       };
     });
     return newCartProducts;
@@ -132,7 +164,10 @@ const App = () => {
     return (
       <Switch>
         <Route exact path="/">
-          <Profile userData={userData} handleCloseSession={handleCloseSession} />
+          <Profile
+            userData={userData}
+            handleCloseSession={handleCloseSession}
+          />
           <div className="col2">
             <Products
               shopProducts={filterProducts()}
@@ -154,13 +189,16 @@ const App = () => {
   };
 
   const filterProducts = () => {
-    return shopProducts.filter(product =>
+    return shopProducts.filter((product) =>
       product.name.toLowerCase().includes(filterText.toLowerCase())
     );
   };
 
-  const renderDetail = props => {
-    const foundProduct = shop.getProduct(shopProducts, props.match.params.productId);
+  const renderDetail = (props) => {
+    const foundProduct = shop.getProduct(
+      shopProducts,
+      props.match.params.productId
+    );
     if (foundProduct) {
       return (
         <ProductDetail
@@ -176,7 +214,7 @@ const App = () => {
     }
   };
 
-  return <>{userId === '' ? renderLogin() : renderShop()}</>;
+  return <>{userId === "" ? renderLogin() : renderShop()}</>;
 };
 
 export default App;

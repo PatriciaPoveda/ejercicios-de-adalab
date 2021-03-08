@@ -25,6 +25,7 @@ app.listen(serverPort, () => {
 // api
 
 app.post("/api/login", apiUsers.login);
+app.post("/api/signup", apiUsers.signUp);
 app.get("/api/user", apiUsers.getUser);
 app.get("/api/cart", apiCarts.getUserCart);
 app.post("/api/cart", apiCarts.updateUserCart);

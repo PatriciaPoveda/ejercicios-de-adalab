@@ -4,15 +4,24 @@ import Title from "../components/Title";
 const Login = (props) => {
   // state
   const [email, setEmail] = useState("maria@gmail.com");
+  const [emailsignUp, setEmailSignUp] = useState("");
   const [password, setPassword] = useState("987widJYVxyh");
+  const [passwordsignUp, setPasswordSignUp] = useState("");
 
   // events
   const handleEmail = (ev) => {
     setEmail(ev.target.value);
   };
+  const handleEmailsignUp = (ev) => {
+    setEmailSignUp(ev.target.value);
+  };
 
   const handlePassword = (ev) => {
     setPassword(ev.target.value);
+  };
+
+  const handlePasswordsignUp = (ev) => {
+    setPasswordSignUp(ev.target.value);
   };
 
   const handleFormSubmit = (ev) => {
@@ -22,34 +31,67 @@ const Login = (props) => {
       password: password,
     });
   };
-
+  const handleFormsignUp = (ev) => {
+    ev.stopPropagation();
+    props.handlesignUp({
+      email: emailsignUp,
+      password: passwordsignUp,
+    });
+  };
   return (
-    <form className="mb-1" onSubmit={handleFormSubmit}>
-      <Title title="Bienvenida a nuestra tienda de camisetas" />
-      <Title title="Identifícate por favor" />
-      <label className="form__label display-block" htmlFor="email">
-        Escribe tu email:
-      </label>
-      <input
-        className="form__input-text m-0"
-        type="text"
-        id="email"
-        value={email}
-        onChange={handleEmail}
-      />
-      <label className="form__label display-block" htmlFor="password">
-        Escribe tu contraseña:
-      </label>
-      <input
-        className="form__input-text m-0"
-        type="password"
-        id="password"
-        value={password}
-        onChange={handlePassword}
-      />
-      <button className="card__btn m-0 mt-1">Entrar</button>
-      {props.loginError}
-    </form>
+    <>
+      <form className="mb-1" onSubmit={handleFormSubmit}>
+        <Title title="Bienvenida a nuestra tienda de camisetas" />
+        <Title title="Identifícate por favor" />
+        <label className="form__label display-block" htmlFor="email">
+          Escribe tu email:
+        </label>
+        <input
+          className="form__input-text m-0"
+          type="text"
+          id="email"
+          value={email}
+          onChange={handleEmail}
+        />
+        <label className="form__label display-block" htmlFor="password">
+          Escribe tu contraseña:
+        </label>
+        <input
+          className="form__input-text m-0"
+          type="password"
+          id="password"
+          value={password}
+          onChange={handlePassword}
+        />
+        <button className="card__btn m-0 mt-1">Entrar</button>
+        {props.loginError}
+      </form>
+      <form className="mb-1" onSubmit={handleFormsignUp}>
+        <Title title="Si no tienes cuenta regístrate" />
+        <label className="form__label display-block" htmlFor="email">
+          Escribe tu email:
+        </label>
+        <input
+          className="form__input-text m-0"
+          type="text"
+          id="email"
+          // value={emailsignUp}
+          onChange={handleEmailsignUp}
+        />
+        <label className="form__label display-block" htmlFor="password">
+          Escribe tu contraseña:
+        </label>
+        <input
+          className="form__input-text m-0"
+          type="password"
+          id="password"
+          // value={password}
+          onChange={handlePasswordsignUp}
+        />
+        <button className="card__btn m-0 mt-1">Registrar</button>
+        {props.signUpError}
+      </form>
+    </>
   );
 };
 
