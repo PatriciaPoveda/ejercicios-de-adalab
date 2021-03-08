@@ -21,12 +21,12 @@ const getUserByEmailAndPassword = (email, password) => {
 
 const getSignUp = (email, password) => {
   const query = data.db.prepare(
-    `INSERT INTO users (email, password) VALUES (?, ?)`
+    `INSERT or IGNORE INTO users (email, password) VALUES (?, ?)`
   );
   const signUpUser = query.run(email, password);
+  console.log(signUpUser);
   return signUpUser;
 };
-
 module.exports = {
   // isValidUserId: isValidUserId,
   getUserById: getUserById,

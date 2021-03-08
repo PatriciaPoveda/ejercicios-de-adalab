@@ -23,15 +23,15 @@ const login = (req, res) => {
 };
 const signUp = (req, res) => {
   const userSignUp = usersData.getSignUp(req.body.email, req.body.password);
-  if (userSignUp) {
+  if (userSignUp.changes === 1) {
     res.json({
       result: "User created",
-      // userId: result.lastInsertRowid,
+      userId: userSignUp.lastInsertRowid,
     });
   } else {
     res.status(404).json({
-      error: "user-not-registered",
-      message: "User not registered",
+      error: "user-already-exists",
+      message: "user already exists",
     });
   }
 };
