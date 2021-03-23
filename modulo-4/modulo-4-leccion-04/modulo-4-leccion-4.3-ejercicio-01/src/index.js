@@ -1,24 +1,24 @@
 const express = require("express");
 const cors = require("cors");
-const films = require("./api/films");
 const Database = require("better-sqlite3");
 
-// create app server
+// create server
 const app = express();
 
-// set express middlewares
+// set express middleware
 app.use(express.json());
 app.use(cors());
-
-// set template engine middlewares
-app.set("view engine", "ejs");
 
 // init express aplication
 const serverPort = 3000;
 app.listen(serverPort, () => {
-  console.log(`App listening at http://localhost:${serverPort}`);
+  console.log(`Server listening at http://localhost:${serverPort}`);
 });
 
-// endpoints
+// init and config data base
+const db = new Database("./src/database.db", {
+  // this line log in console all data base queries
+  verbose: console.log,
+});
 
-app.get("/es/film:filmId.html", films);
+// api endpoints
